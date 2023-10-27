@@ -1,0 +1,327 @@
+html {
+    height: 100%;
+}
+
+@font-face {
+    font-family: "Permanent Marker";
+    src: url(./fonts/PermanentMarker.ttf) format("truetype"),
+      url(./fonts/PermanentMarker.woff) format("woff");
+}
+  
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+    color: aliceblue;
+}
+  
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(rgb(233, 161, 7), black);
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(black, rgb(233, 161, 7));
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px whitesmoke;
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: white;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(250, 206, 11);
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.login-box a:hover {
+    background: black;
+    color: rgb(250, 206, 11);
+    border-radius: 5px;
+    box-shadow: 0 0 5px whitesmoke, 0 0 25px white, 0 0 50px whitesmoke, 0 0 100px white;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white);
+    animation: btn-anim1 1s linear infinite;
+    animation-delay: .2s
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+    50%,
+    100% {
+        left: 80%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, white);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .15s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+    50%,
+    100% {
+        top: 80%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, white);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .2s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+    50%,
+    100% {
+        right: 80%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, white);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .15s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -1000%;
+    }
+    50%,
+    100% {
+        bottom: 80%;
+    }
+} 
+
+.story {
+    font-family: "Permanent Marker", sans-serif;
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.story h2 {
+    color: springgreen;
+}
+  
+.page {
+    font-family: "Inter", sans-serif;
+    background: black;
+}
+  
+.header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/nature.jpg);
+    background-size: 100%;
+    background-position: center;
+    text-align: center;
+    margin-bottom: 200px;
+}
+  
+.name {
+    font-family: "Permanent Marker", cursive;
+    font-size: 140px;
+    line-height: 140px;
+    color: gold;
+    text-transform: uppercase;
+    max-width: 1240px;
+    margin: auto;
+}
+  
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+  
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 790px;
+    margin: 100px auto 50px;
+  
+}
+  
+.card {
+    max-width: 350px;
+    height: 100%;
+    margin-bottom: 200px;
+    background: #ffffff;
+    box-shadow: 4px 4px 5px rgba(0, 132, 255, 0.4);
+    height: 200px;
+    object-fit: contain;
+}
+  
+.subtitle_card {
+    font-family: "Permanent Marker", cursive;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.text {
+    font-size: 16px;
+}
+
+.card_image {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25px;
+    object-fit: cover;
+    cursor: pointer;
+}
+  
+.table h1 {
+    text-align: center;
+    font-size: 50px;
+    color: greenyellow;
+}
+  
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 140px;
+    margin-top: 25px;
+}
+  
+td, th {
+    border: 2px solid #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+  
+button {
+    border-radius: 50px;
+    padding: 10px 15px;
+    cursor: pointer
+} 
+  
+.btn-primary {
+    background-color: blue;
+    color: aliceblue;
+}
+
+.btn-danger {
+    background-color: red;
+    color: aliceblue;
+}
+
+.footer {
+    display: flex;
+    min-height: 300px;
+    background-color: #000000;
+}
+
+.footer_sign {
+    font-size: 24px;
+    color: #ffffff;
+    margin: auto;
+}
+  
+  
+  
