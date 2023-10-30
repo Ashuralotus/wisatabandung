@@ -26,10 +26,13 @@ a {
 }
 
 body {
-    margin: 0;
     padding: 0;
     font-family: sans-serif;
     background: linear-gradient(rgb(233, 161, 7), black);
+}
+
+.page {
+    width: 1600px;
 }
 
 .login-box {
